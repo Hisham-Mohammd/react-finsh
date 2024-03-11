@@ -32,7 +32,7 @@ Navigate('/login')
                         <ul className="navbar-nav me-auto mb-2 mb-lg- ">
                             {userToken !=null?<>
                                 <li className="nav-item">
-                                <Link className="nav-link text-white" to={'Home'}>Home{count}</Link>
+                                <Link className="nav-link text-white" to={'Home'}></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to={'Carts'}>carts</Link>
