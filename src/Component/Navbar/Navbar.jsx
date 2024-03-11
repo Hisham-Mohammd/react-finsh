@@ -4,11 +4,13 @@ import{ Link, Navigate, useNavigate } from 'react-router-dom'
 import logo from '../../acess/logo-main.png'
 import { ConterContext } from '../../Context/ConterContext.js';
 import { UserContext } from '../../Context/UserContext.js';
+import { useSelector } from 'react-redux';
 
 
 
 export default function Navbar() {
- let {count}=useContext(ConterContext)
+    
+let {count} =useSelector(({counter})=>counter)
 let {userToken , setUserToken} =useContext( UserContext )
 let Navigate = useNavigate()
 function LOgout() {
@@ -30,10 +32,13 @@ Navigate('/login')
                         <ul className="navbar-nav me-auto mb-2 mb-lg- ">
                             {userToken !=null?<>
                                 <li className="nav-item">
-                                <Link className="nav-link text-white" to={'Home'}>Home</Link>
+                                <Link className="nav-link text-white" to={'Home'}>Home{count}</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to={'Carts'}>carts</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white" to={'Product'}>Product</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to={'categories'}>categories</Link>
@@ -41,6 +46,7 @@ Navigate('/login')
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to={'Brands'}>Brands</Link>
                             </li>
+                            
 
                             
                             </>:'' }
@@ -57,7 +63,7 @@ Navigate('/login')
                             {userToken !=null ?<><li className="nav-item ">
                               
 
-                                <span onClick={LOgout} className="nav-link  text-white  " to={'LogOut'}>LogOut</span>
+                                <span onClick={LOgout} className="nav-link  text-white roun " to={'LogOut'}>LogOut</span>
 
                             </li></>:<><li className="nav-item">
                                 <Link className="nav-link text-white" to={'register'}>Register</Link>

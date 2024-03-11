@@ -75,11 +75,11 @@ export default function Cart() {
                                 </div>
                                
                             </div>
-                            <div className="col-md-1">
+                            <div className="col-md-1 ">
                                     <div className="count">
                                         <button onClick={()=>Ubdatecart(product.product.id , product.count +1)} className='btn brdr p-1'>+</button>
 
-                                        <span className=' mx-2'>{product.count}</span>
+                                        <span className=' mx-1'>{product.count}</span>
 
                                         <button onClick={()=>Ubdatecart(product.product.id , product.count -1)} className='btn brdr p-1 '>-</button>
                                     </div>

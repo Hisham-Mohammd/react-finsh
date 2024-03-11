@@ -10,7 +10,7 @@ import Slider from 'react-slick'
 
 export default function MainSlider() {
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         autoplay: true,
         autoplaySpeed:3000,
@@ -20,15 +20,15 @@ export default function MainSlider() {
         
       };
 return <>
-    <div className="   row my-3 g-0">
-        <div className=" col-md-8  ms-5">
+    <div className="   row my-3 g-0 ms-5">
+        <div className=" col-md-8  ">
             <Slider {...settings} >
                 <img src={Slider1} height={400} className='w-100'></img>
                 <img src={Slider2} height={400} className='w-100'></img>
                 <img src={Slider3} height={400} className='w-100'></img>
             </Slider>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 ">
             <div className="imadges">
                 <img src={img1} className=' w-100' height={200} alt="" />
                 <img src={img2} className='w-100' height={200} alt="" />

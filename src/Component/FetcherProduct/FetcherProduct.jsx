@@ -36,7 +36,7 @@ export default function FetcherProduct() {
 
 
 
-        <h2>FetcherProduct</h2>
+        
 
         {isLoading ?
             <div className="row  justify-content-center align-content-center vh-100 ">
