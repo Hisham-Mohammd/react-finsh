@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import style from './carts.module.css'
 import { CartContext } from '../Context/CartContext'
 import { DotLoader } from 'react-spinners';
+import { Link } from 'react-router-dom';
 
 export default function Cart() {
     let {UbdatecartItems, gitcartItems , deletecartItems } = useContext(CartContext);
@@ -83,10 +84,11 @@ export default function Cart() {
 
                                         <button onClick={()=>Ubdatecart(product.product.id , product.count -1)} className='btn brdr p-1 '>-</button>
                                     </div>
+                                    
                                 </div>
                         </div>
                     )}
-
+                <Link to={`/Shippingaddress/${cart.data._id} `} className='btn  bg-main'> onilin paypment</Link>
                 </>}
         </div>
     </>

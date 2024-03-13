@@ -10,7 +10,7 @@ import Layout from './Component/Layout/Layout'
 import NotFoundBadg from './Component/NotFoundBadg/NotFoundBadg'
 import LOgin from './Component/login/login'
 import Forget from './Component/Forget/Forget'
-import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom'
+import { RouterProvider,  createHashRouter } from 'react-router-dom'
 import ConterContextProvider from './Context/ConterContext'
 import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute'
 
@@ -19,6 +19,7 @@ import { UserContext } from './Context/UserContext'
 import { Toaster } from 'react-hot-toast'
 import { Provider } from 'react-redux'
 import { stor } from './redux/stot'
+import Shippingaddress from './Component/Shippingaddress/Shippingaddress'
 
 
 
@@ -35,6 +36,7 @@ export default function App() {
         { indx: true, element: <ProtectedRoute><Home /></ProtectedRoute> },
 
         { path: 'Brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
+        { path: 'Shippingaddress/:cartId', element: <ProtectedRoute><Shippingaddress /></ProtectedRoute> },
 
 
         { path: 'login', element: <LOgin /> },
